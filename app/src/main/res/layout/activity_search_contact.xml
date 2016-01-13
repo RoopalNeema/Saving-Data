@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cef4fb8d"
+    tools:context="com.example.leftshift.mydbcode.SearchContactActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_name"
+        android:hint="@string/search_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_button"
+        android:id="@+id/search_button"
+        android:textColor="#000000"
+        android:onClick="searchContact"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/search_name"
+        android:layout_alignRight="@+id/text_mob"
+        android:layout_alignEnd="@+id/text_mob" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/display_email"
+        android:id="@+id/text_email"
+        android:layout_above="@+id/text_mob"
+        android:layout_alignLeft="@+id/text_mob"
+        android:layout_alignStart="@+id/text_mob"
+        android:layout_marginBottom="80dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/display_mob"
+        android:id="@+id/text_mob"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="122dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_button"
+        android:id="@+id/delete"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/search_button"
+        android:layout_toRightOf="@+id/search_button"
+        android:layout_toEndOf="@+id/search_button"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp" />
+</RelativeLayout>

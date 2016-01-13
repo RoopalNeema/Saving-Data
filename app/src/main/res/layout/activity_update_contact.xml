@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cef4fb8d"
+    tools:context="com.example.leftshift.mydbcode.UpdateContactActivity">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sname"
+        android:hint="@string/Update_search_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Upadte_search_button"
+        android:id="@+id/Up_Search_button"
+        android:layout_below="@+id/sname"
+        android:onClick="UpSearch"
+        android:layout_alignLeft="@+id/Up_Button"
+        android:layout_alignStart="@+id/Up_Button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Update_Contact"
+        android:id="@+id/Up_text"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:layout_below="@+id/Up_Search_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="93dp"
+        android:layout_marginStart="93dp" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Upname"
+        android:hint="@string/Update_name"
+        android:layout_above="@+id/Upmob"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="39dp" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Upmob"
+        android:hint="@string/Update_mob"
+        android:layout_above="@+id/Upemail"
+        android:layout_marginBottom="49dp"
+        android:layout_alignRight="@+id/Upemail"
+        android:layout_alignEnd="@+id/Upemail" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Upemail"
+        android:hint="@string/Upadate_email"
+        android:layout_above="@+id/Up_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Update_button"
+        android:id="@+id/Up_Button"
+        android:onClick="UpdateContact"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp" />
+
+</RelativeLayout>
