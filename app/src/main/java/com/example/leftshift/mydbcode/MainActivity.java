@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public  void deleteContact(View view)
+    public  void Delete(View view)
     {
         Intent intent=new Intent(this,SearchContactActivity.class);
         startActivity(intent);

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SearchContactActivity extends AppCompatActivity {
 
@@ -35,12 +36,13 @@ public class SearchContactActivity extends AppCompatActivity {
    public void searchContact(View view)
    {
 
-        search_name=Search_name.getText().toString();
+       search_name=Search_name.getText().toString();
        userDbHelper=new UserDbHelper(getApplicationContext());
        sqLiteDatabase=userDbHelper.getReadableDatabase();
        Cursor cursor=userDbHelper.getContact(search_name,sqLiteDatabase);
        if (cursor.moveToFirst())
        {
+
            String mob=cursor.getString(0);
            String  email=cursor.getString(1);
            Display_mob.setText(mob);
@@ -52,6 +54,17 @@ public class SearchContactActivity extends AppCompatActivity {
 
 
    }
+
+    public void deleteContact(View view)
+    {
+        userDbHelper=new UserDbHelper(getApplicationContext());
+        sqLiteDatabase=userDbHelper.getReadableDatabase();
+        userDbHelper.deleteInformatiom(search_name,sqLiteDatabase);
+        Toast.makeText(getBaseContext(),"Contact Deleted",Toast.LENGTH_LONG).show();
+        Display_email.setText("");
+        Display_mob.setText("");
+        Search_name.setText("");
+    }
 
 
 }

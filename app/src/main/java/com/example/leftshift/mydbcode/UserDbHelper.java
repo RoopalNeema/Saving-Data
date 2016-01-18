@@ -74,8 +74,15 @@ public class UserDbHelper extends SQLiteOpenHelper {
         contentValues.put(UserContract.NewUserInfo.USER_EMAIL,newemail);
         String selection= UserContract.NewUserInfo.USER_NAME+"  Like ?";
         String[] selectionargs={oldname};
-        int count=db.update(UserContract.NewUserInfo.TABLE_NAME,contentValues,selection,selectionargs);
+        int count=db.update(UserContract.NewUserInfo.TABLE_NAME, contentValues, selection, selectionargs);
         return count;
+    }
+
+    public  void deleteInformatiom(String user_name,SQLiteDatabase sqLiteDatabase)
+    {
+        String selection= UserContract.NewUserInfo.USER_NAME+"  LIKE ?";
+        String[] selectionargs ={user_name};
+        sqLiteDatabase.delete(UserContract.NewUserInfo.TABLE_NAME,selection,selectionargs);
     }
 
     @Override
