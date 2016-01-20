@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void viewContact(View view)
+    public void ViewContact(View view)
     {
         Intent intent=new Intent(this,DataListActivity.class);
         startActivity(intent);

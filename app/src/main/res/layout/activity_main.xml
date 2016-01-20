@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:text="@string/button_2"
         android:id="@+id/button2"
-        android:onClick="viewContact"
+        android:onClick="ViewContact"
         android:layout_above="@+id/button3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
